@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab', serif;
+    font-size: 62.5%; /*10rem/16px = 62.5%*/
+}
+
+body {
+    background: #f0ceca;
+    min-height: 100vh;
+}
+.container {
+    width: 60vw;
+    background: #f3e4e2;
+    box-shadow:  41px 41px 82px #e4c4c0, 
+                 -41px -41px 82px #fcd8d4;
+    margin: 10rem auto;
+    padding: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #2e5adf;
+    margin-bottom: 2rem;
+}
+#description {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: #2e5adf;
+    margin-bottom: 8rem;
+}
+#survey-form {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+}
+.label {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    text-transform: lowercase;
+    text-align: right;
+    vertical-align: top;
+    background-color:#e67568;
+    display: inline-block;
+    width: 40%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-tab {
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2rem;
+    text-transform: lowercase;
+    color: #e67568;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    width: 55%;
+    padding: 1.3rem;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem ;  
+    background-color: #ecf57c;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.5s;
+}
+.input-tab:focus {
+    outline: none;
+    border-bottom: 3px solid #e67568;
+}
+.input-tab:focus:invalid {
+    border-bottom: 3px solid #2e5adf;
+}
+.input-tab::-webkit-input-placeholder {
+    color: #2e5adf;
+}
+.survey-form__radio label,
+.survey-form__checkbox label {
+    display: block;
+    transition: all 0.5s;
+}
+.survey-form__radio label:not(:last-child),
+.survey-form__checkbox label:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.survey-form__radio label:hover,
+.survey-form__checkbox label:hover {
+    color: #2e5adf;
+    font-weight: 500;
+    transform: translateX(5px);
+}
+.survey-form__radio + input[type=radio]:checked {
+    color: #2e5adf;
+}
+.button {
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #2e5adf;
+    padding: 0.7rem 2.8rem;
+    border: none;
+    background-color: #dfc99b;
+    margin: 2rem auto;
+    display: block;
+    align-items: center;
+    transition: all 0.4s;
+}
+.button:hover {
+    background-color: #c4b087;
+    color: white;
+} 
+.footer {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #f0ceca;
+    margin-top: 2rem;
+}
+
+@media (max-width:1500px) {
+    .container {
+        width: 80vw;
+    }
+}
+@media (max-width:1100px) {
+    .container {
+        width: 95vw;
+        padding: 3rem;
+        margin-top: 2rem;
+    }
+    #title {
+        margin-top: 5rem;
+    }
+}
+@media (max-width:800px) {
+    .container {
+        width: 100vw;
+        padding: 1rem;
+        margin: 0;
+    }
+    #title {
+        margin-top: 6rem;
+    }
+}
+@media (max-width:700px) {
+    .container {
+        width: 100vw;
+        padding: 4rem;
+        margin: 0;
+    }
+    #title {
+        margin-top: 6rem;
+        text-align: center;
+    }
+    #description {
+        text-align: center;
+    }
+    .label {
+        letter-spacing: 2px;
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+    }
+    .input-tab {
+        width: 100%;
+        margin-left: 0;
+    }
+    .footer {
+        text-align: center;
+    }
+}
